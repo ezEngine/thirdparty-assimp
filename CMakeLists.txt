@@ -25,7 +25,8 @@ if(EZ_CMAKE_PLATFORM_WINDOWS)
   
   endfunction()
 
-else()
+elseif(EZ_CMAKE_PLATFORM_LINUX)
+
   find_package(assimp 5)
   if(NOT assimp_FOUND)
 	message(FATAL_ERROR "Could not find assimp. Install it through your OS package manager 'libassimp-dev' or provide it through CMAKE_PREFIX_PATH")
