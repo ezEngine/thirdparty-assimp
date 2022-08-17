@@ -5,7 +5,19 @@ ez_requires_assimp()
 # Get the name of this folder as the project name
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME_WE)
 
-ez_create_target(SHARED_LIBRARY ${PROJECT_NAME} NO_EZ_PREFIX NO_UNITY NO_WARNINGS_AS_ERRORS ENABLE_RTTI NO_DEBUG)
+file(GLOB_RECURSE SRC_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.cc" "${CMAKE_CURRENT_SOURCE_DIR}/*.h" "${CMAKE_CURRENT_SOURCE_DIR}/*.c" "${CMAKE_CURRENT_SOURCE_DIR}/*.inl" "${CMAKE_CURRENT_SOURCE_DIR}/*.txt" "${CMAKE_CURRENT_SOURCE_DIR}/*.cmake")
+
+if (EZ_3RDPARTY_ASSIMP_DRACO_SUPPORT)
+  target_compile_definitions(${PROJECT_NAME} PRIVATE ASSIMP_ENABLE_DRACO)
+else()
+  foreach(str ${SRC_FILES})
+    if (${str} MATCHES "contrib/draco")
+      list(REMOVE_ITEM SRC_FILES ${str})
+    endif()
+  endforeach()
+endif()
+
+ez_create_target(SHARED_LIBRARY ${PROJECT_NAME} NO_EZ_PREFIX NO_UNITY NO_WARNINGS_AS_ERRORS ENABLE_RTTI NO_DEBUG MANUAL_SOURCE_FILES "${SRC_FILES}")
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC BUILDSYSTEM_ENABLE_AI_SUPPORT)
 target_compile_definitions(${PROJECT_NAME} PUBLIC ASSIMP_DLL)
@@ -17,6 +29,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}/code"
   "${CMAKE_CURRENT_SOURCE_DIR}"
   "${CMAKE_CURRENT_SOURCE_DIR}/contrib"
+  "${CMAKE_CURRENT_SOURCE_DIR}/contrib/draco/src"
   "${CMAKE_CURRENT_SOURCE_DIR}/contrib/zlib"
   "${CMAKE_CURRENT_SOURCE_DIR}/contrib/unzip"
   "${CMAKE_CURRENT_SOURCE_DIR}/contrib/rapidjson/include"
