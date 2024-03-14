@@ -6,7 +6,7 @@
         "git": {
 		  "Version": "5.3.1",
           "repositoryUrl": "https://github.com/assimp/assimp",
-          "commitHash": "6a08c39e3a91ef385e76515cfad86aca4bfd57ff"
+          "commitHash": "727774f181e0f06d51db6fcafa343f46081c4cfa"
         }
       }
     }

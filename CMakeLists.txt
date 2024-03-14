@@ -24,6 +24,7 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC ASSIMP_DLL)
 target_compile_definitions(${PROJECT_NAME} PRIVATE ASSIMP_BUILD_DLL_EXPORT)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/contrib/utf8cpp/source")
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}/code"
