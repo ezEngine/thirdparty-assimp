@@ -74,7 +74,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * Property type: bool. Default value: false.
  */
-#define AI_CONFIG_GLOB_MEASURE_TIME \
+#define AI_CONFIG_GLOB_MEASURE_TIME  \
     "GLOB_MEASURE_TIME"
 
 // ---------------------------------------------------------------------------
@@ -107,7 +107,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // default limit for bone count
 #if (!defined AI_SBBC_DEFAULT_MAX_BONES)
-#define AI_SBBC_DEFAULT_MAX_BONES 60
+#   define AI_SBBC_DEFAULT_MAX_BONES        60
 #endif
 
 // ---------------------------------------------------------------------------
@@ -156,7 +156,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * a default palette (from Quake 1) is used.
  * Property type: string.
  */
-#define AI_CONFIG_IMPORT_MDL_COLORMAP \
+#define AI_CONFIG_IMPORT_MDL_COLORMAP       \
     "IMPORT_MDL_COLORMAP"
 
 // ---------------------------------------------------------------------------
@@ -178,7 +178,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @note Linefeeds, tabs or carriage returns are treated as whitespace.
  *   Material names are case sensitive.
  */
-#define AI_CONFIG_PP_RRM_EXCLUDE_LIST \
+#define AI_CONFIG_PP_RRM_EXCLUDE_LIST   \
     "PP_RRM_EXCLUDE_LIST"
 
 // ---------------------------------------------------------------------------
@@ -193,7 +193,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * any transformations.
  * Property type: bool. Default value: false.
  */
-#define AI_CONFIG_PP_PTV_KEEP_HIERARCHY \
+#define AI_CONFIG_PP_PTV_KEEP_HIERARCHY     \
     "PP_PTV_KEEP_HIERARCHY"
 
 // ---------------------------------------------------------------------------
@@ -203,7 +203,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  meshes are scaled appropriately (uniformly of course!).
  *  This might be useful if you don't know the spatial dimension of the input
  *  data*/
-#define AI_CONFIG_PP_PTV_NORMALIZE \
+#define AI_CONFIG_PP_PTV_NORMALIZE  \
     "PP_PTV_NORMALIZE"
 
 // ---------------------------------------------------------------------------
@@ -212,7 +212,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  transforming vertices.
  *  Property type: bool. Default value: false.
  */
-#define AI_CONFIG_PP_PTV_ADD_ROOT_TRANSFORMATION \
+#define AI_CONFIG_PP_PTV_ADD_ROOT_TRANSFORMATION    \
     "PP_PTV_ADD_ROOT_TRANSFORMATION"
 
 // ---------------------------------------------------------------------------
@@ -222,7 +222,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  of the transformation matrix.
  *  Property type: aiMatrix4x4.
  */
-#define AI_CONFIG_PP_PTV_ROOT_TRANSFORMATION \
+#define AI_CONFIG_PP_PTV_ROOT_TRANSFORMATION    \
     "PP_PTV_ROOT_TRANSFORMATION"
 
 // ---------------------------------------------------------------------------
@@ -237,7 +237,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // default value for AI_CONFIG_CHECK_IDENTITY_MATRIX_EPSILON
 #if (!defined AI_CONFIG_CHECK_IDENTITY_MATRIX_EPSILON_DEFAULT)
-#define AI_CONFIG_CHECK_IDENTITY_MATRIX_EPSILON_DEFAULT 10e-3f
+#   define AI_CONFIG_CHECK_IDENTITY_MATRIX_EPSILON_DEFAULT 10e-3f
 #endif
 
 // ---------------------------------------------------------------------------
@@ -280,7 +280,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @note Linefeeds, tabs or carriage returns are treated as whitespace.
  *   Node names are case sensitive.
  */
-#define AI_CONFIG_PP_OG_EXCLUDE_LIST \
+#define AI_CONFIG_PP_OG_EXCLUDE_LIST    \
     "PP_OG_EXCLUDE_LIST"
 
 // ---------------------------------------------------------------------------
@@ -296,7 +296,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // default value for AI_CONFIG_PP_SLM_TRIANGLE_LIMIT
 #if (!defined AI_SLM_DEFAULT_MAX_TRIANGLES)
-#define AI_SLM_DEFAULT_MAX_TRIANGLES 1000000
+#   define AI_SLM_DEFAULT_MAX_TRIANGLES     1000000
 #endif
 
 // ---------------------------------------------------------------------------
@@ -312,7 +312,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // default value for AI_CONFIG_PP_SLM_VERTEX_LIMIT
 #if (!defined AI_SLM_DEFAULT_MAX_VERTICES)
-#define AI_SLM_DEFAULT_MAX_VERTICES 1000000
+#   define AI_SLM_DEFAULT_MAX_VERTICES      1000000
 #endif
 
 // ---------------------------------------------------------------------------
@@ -321,12 +321,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * This is used by the #aiProcess_LimitBoneWeights PostProcess-Step.
  * @note The default value is AI_LMW_MAX_WEIGHTS
  * Property type: integer.*/
-#define AI_CONFIG_PP_LBW_MAX_WEIGHTS \
+#define AI_CONFIG_PP_LBW_MAX_WEIGHTS    \
     "PP_LBW_MAX_WEIGHTS"
 
 // default value for AI_CONFIG_PP_LBW_MAX_WEIGHTS
 #if (!defined AI_LMW_MAX_WEIGHTS)
-#define AI_LMW_MAX_WEIGHTS 0x4
+#   define AI_LMW_MAX_WEIGHTS   0x4
 #endif // !! AI_LMW_MAX_WEIGHTS
 
 // ---------------------------------------------------------------------------
@@ -340,7 +340,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // default value for AI_CONFIG_PP_LBW_MAX_WEIGHTS
 #if (!defined AI_DEBONE_THRESHOLD)
-#define AI_DEBONE_THRESHOLD 1.0f
+#   define AI_DEBONE_THRESHOLD  1.0f
 #endif // !! AI_DEBONE_THRESHOLD
 
 // ---------------------------------------------------------------------------
@@ -355,7 +355,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /** @brief Default value for the #AI_CONFIG_PP_ICL_PTCACHE_SIZE property
  */
 #ifndef PP_ICL_PTCACHE_SIZE
-#define PP_ICL_PTCACHE_SIZE 12
+#   define PP_ICL_PTCACHE_SIZE 12
 #endif
 
 // ---------------------------------------------------------------------------
@@ -369,7 +369,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * performance improvements for most nVidia/AMD cards since 2002.
  * Property type: integer.
  */
-#define AI_CONFIG_PP_ICL_PTCACHE_SIZE "PP_ICL_PTCACHE_SIZE"
+#define AI_CONFIG_PP_ICL_PTCACHE_SIZE   "PP_ICL_PTCACHE_SIZE"
 
 // ---------------------------------------------------------------------------
 /** @brief Enumerates components of the aiScene and aiMesh data structures
@@ -377,15 +377,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *  See the documentation to #aiProcess_RemoveComponent for more details.
  */
-enum aiComponent {
-/** Normal vectors */
+enum aiComponent
+{
+    /** Normal vectors */
 #ifdef SWIG
     aiComponent_NORMALS = 0x2,
 #else
     aiComponent_NORMALS = 0x2u,
 #endif
 
-/** Tangents and bitangents go always together ... */
+    /** Tangents and bitangents go always together ... */
 #ifdef SWIG
     aiComponent_TANGENTS_AND_BITANGENTS = 0x4,
 #else
@@ -430,18 +431,19 @@ enum aiComponent {
      * be generated, so aiScene::mNumMaterials will be 1. */
     aiComponent_MATERIALS = 0x800,
 
-/** This value is not used. It is just there to force the
- *  compiler to map this enum to a 32 Bit integer. */
+
+    /** This value is not used. It is just there to force the
+     *  compiler to map this enum to a 32 Bit integer. */
 #ifndef SWIG
     _aiComponent_Force32Bit = 0x9fffffff
 #endif
 };
 
 // Remove a specific color channel 'n'
-#define aiComponent_COLORSn(n) (1u << (n + 20u))
+#define aiComponent_COLORSn(n) (1u << (n+20u))
 
 // Remove a specific UV channel 'n'
-#define aiComponent_TEXCOORDSn(n) (1u << (n + 25u))
+#define aiComponent_TEXCOORDSn(n) (1u << (n+25u))
 
 // ---------------------------------------------------------------------------
 /** @brief Input parameter to the #aiProcess_RemoveComponent step:
@@ -455,7 +457,7 @@ enum aiComponent {
  * of the flags defined above) the import FAILS. Mainly because there is
  * no data to work on anymore ...
  */
-#define AI_CONFIG_PP_RVC_FLAGS \
+#define AI_CONFIG_PP_RVC_FLAGS              \
     "PP_RVC_FLAGS"
 
 // ---------------------------------------------------------------------------
@@ -467,7 +469,7 @@ enum aiComponent {
  *  be to exclude all line and point meshes from the import. This
  *  is an integer property, its default value is 0.
  */
-#define AI_CONFIG_PP_SBP_REMOVE \
+#define AI_CONFIG_PP_SBP_REMOVE             \
     "PP_SBP_REMOVE"
 
 // ---------------------------------------------------------------------------
@@ -479,7 +481,7 @@ enum aiComponent {
  *  abs(n0-n1)>epsilon holds true for all vector respectively quaternion
  *  components. The default value is 0.f - comparisons are exact then.
  */
-#define AI_CONFIG_PP_FID_ANIM_ACCURACY \
+#define AI_CONFIG_PP_FID_ANIM_ACCURACY              \
     "PP_FID_ANIM_ACCURACY"
 
 // ---------------------------------------------------------------------------
@@ -487,7 +489,7 @@ enum aiComponent {
  *  Set to true to ignore texture coordinates. This may be useful if you have
  *  to assign different kind of textures like one for the summer or one for the winter.
  */
-#define AI_CONFIG_PP_FID_IGNORE_TEXTURECOORDS \
+#define AI_CONFIG_PP_FID_IGNORE_TEXTURECOORDS        \
     "PP_FID_IGNORE_TEXTURECOORDS"
 
 // TransformUVCoords evaluates UV scalings
@@ -510,7 +512,7 @@ enum aiComponent {
  *  property, of course). By default all transformations are enabled
  * (AI_UVTRAFO_ALL).
  */
-#define AI_CONFIG_PP_TUV_EVALUATE \
+#define AI_CONFIG_PP_TUV_EVALUATE               \
     "PP_TUV_EVALUATE"
 
 // ---------------------------------------------------------------------------
@@ -522,8 +524,8 @@ enum aiComponent {
  * This property is expected to be an integer, != 0 stands for true.
  * The default value is 0.
  */
-#define AI_CONFIG_FAVOUR_SPEED \
-    "FAVOUR_SPEED"
+#define AI_CONFIG_FAVOUR_SPEED              \
+ "FAVOUR_SPEED"
 
 // ###########################################################################
 // IMPORTER SETTINGS
@@ -657,7 +659,7 @@ enum aiComponent {
  * Property type: bool
  */
 #define AI_CONFIG_IMPORT_FBX_EMBEDDED_TEXTURES_LEGACY_NAMING \
-    "AI_CONFIG_IMPORT_FBX_EMBEDDED_TEXTURES_LEGACY_NAMING"
+	"AI_CONFIG_IMPORT_FBX_EMBEDDED_TEXTURES_LEGACY_NAMING"
 
 // ---------------------------------------------------------------------------
 /** @brief  Set wether the importer shall not remove empty bones.
@@ -666,6 +668,7 @@ enum aiComponent {
  */
 #define AI_CONFIG_IMPORT_REMOVE_EMPTY_BONES \
     "AI_CONFIG_IMPORT_REMOVE_EMPTY_BONES"
+
 
 // ---------------------------------------------------------------------------
 /** @brief  Set wether the FBX importer shall convert the unit from cm to m.
@@ -695,14 +698,14 @@ enum aiComponent {
  *   want to override the global setting).
  * Property type: integer.
  */
-#define AI_CONFIG_IMPORT_GLOBAL_KEYFRAME "IMPORT_GLOBAL_KEYFRAME"
+#define AI_CONFIG_IMPORT_GLOBAL_KEYFRAME    "IMPORT_GLOBAL_KEYFRAME"
 
-#define AI_CONFIG_IMPORT_MD3_KEYFRAME "IMPORT_MD3_KEYFRAME"
-#define AI_CONFIG_IMPORT_MD2_KEYFRAME "IMPORT_MD2_KEYFRAME"
-#define AI_CONFIG_IMPORT_MDL_KEYFRAME "IMPORT_MDL_KEYFRAME"
-#define AI_CONFIG_IMPORT_MDC_KEYFRAME "IMPORT_MDC_KEYFRAME"
-#define AI_CONFIG_IMPORT_SMD_KEYFRAME "IMPORT_SMD_KEYFRAME"
-#define AI_CONFIG_IMPORT_UNREAL_KEYFRAME "IMPORT_UNREAL_KEYFRAME"
+#define AI_CONFIG_IMPORT_MD3_KEYFRAME       "IMPORT_MD3_KEYFRAME"
+#define AI_CONFIG_IMPORT_MD2_KEYFRAME       "IMPORT_MD2_KEYFRAME"
+#define AI_CONFIG_IMPORT_MDL_KEYFRAME       "IMPORT_MDL_KEYFRAME"
+#define AI_CONFIG_IMPORT_MDC_KEYFRAME       "IMPORT_MDC_KEYFRAME"
+#define AI_CONFIG_IMPORT_SMD_KEYFRAME       "IMPORT_SMD_KEYFRAME"
+#define AI_CONFIG_IMPORT_UNREAL_KEYFRAME    "IMPORT_UNREAL_KEYFRAME"
 
 // ---------------------------------------------------------------------------
 /** @brief Set whether the MDL (HL1) importer will read animations.
@@ -721,6 +724,12 @@ enum aiComponent {
  */
 #define AI_CONFIG_IMPORT_MDL_HL1_READ_ANIMATION_EVENTS "IMPORT_MDL_HL1_READ_ANIMATION_EVENTS"
 
+// ---------------------------------------------------------------------------
+/** @brief Set whether you want to convert the HS1 coordinate system in a special way.
+ * The default value is true (S1)
+ * Property type: bool
+ */
+#define AI_CONFIG_IMPORT_MDL_HL1_TRANSFORM_COORD_SYSTEM "TRANSFORM COORDSYSTEM FOR HS! MODELS"
 // ---------------------------------------------------------------------------
 /** @brief Set whether the MDL (HL1) importer will read blend controllers.
  * \note This property requires AI_CONFIG_IMPORT_MDL_HL1_READ_ANIMATIONS to be set to true.
@@ -795,7 +804,7 @@ enum aiComponent {
  *
  * * Property type: bool. Default value: true.
  */
-#define AI_CONFIG_IMPORT_AC_EVAL_SUBDIVISION \
+#define AI_CONFIG_IMPORT_AC_EVAL_SUBDIVISION    \
     "IMPORT_AC_EVAL_SUBDIVISION"
 
 // ---------------------------------------------------------------------------
@@ -827,7 +836,7 @@ enum aiComponent {
  * Some ASE files have carry invalid normals, other don't.
  * * Property type: bool. Default value: true.
  */
-#define AI_CONFIG_IMPORT_ASE_RECONSTRUCT_NORMALS \
+#define AI_CONFIG_IMPORT_ASE_RECONSTRUCT_NORMALS    \
     "IMPORT_ASE_RECONSTRUCT_NORMALS"
 
 // ---------------------------------------------------------------------------
@@ -892,7 +901,7 @@ enum aiComponent {
  * layer name may not be empty.<br>
  * Property type: Integer. Default value: all layers are loaded.
  */
-#define AI_CONFIG_IMPORT_LWO_ONE_LAYER_ONLY \
+#define AI_CONFIG_IMPORT_LWO_ONE_LAYER_ONLY         \
     "IMPORT_LWO_ONE_LAYER_ONLY"
 
 // ---------------------------------------------------------------------------
@@ -906,7 +915,7 @@ enum aiComponent {
  *
  * * Property type: bool. Default value: false.
  */
-#define AI_CONFIG_IMPORT_MD5_NO_ANIM_AUTOLOAD \
+#define AI_CONFIG_IMPORT_MD5_NO_ANIM_AUTOLOAD           \
     "IMPORT_MD5_NO_ANIM_AUTOLOAD"
 
 // ---------------------------------------------------------------------------
@@ -925,9 +934,9 @@ enum aiComponent {
  *
  * @see AI_CONFIG_IMPORT_LWS_ANIM_END - end of the imported time range
  */
-#define AI_CONFIG_IMPORT_LWS_ANIM_START \
+#define AI_CONFIG_IMPORT_LWS_ANIM_START         \
     "IMPORT_LWS_ANIM_START"
-#define AI_CONFIG_IMPORT_LWS_ANIM_END \
+#define AI_CONFIG_IMPORT_LWS_ANIM_END           \
     "IMPORT_LWS_ANIM_END"
 
 // ---------------------------------------------------------------------------
@@ -938,7 +947,7 @@ enum aiComponent {
  * are returned by the converter.<br>
  * Property type: integer. Default value: 100
  */
-#define AI_CONFIG_IMPORT_IRR_ANIM_FPS \
+#define AI_CONFIG_IMPORT_IRR_ANIM_FPS               \
     "IMPORT_IRR_ANIM_FPS"
 
 // ---------------------------------------------------------------------------
@@ -974,13 +983,13 @@ enum aiComponent {
 #define AI_CONFIG_IMPORT_OGRE_TEXTURETYPE_FROM_FILENAME \
     "IMPORT_OGRE_TEXTURETYPE_FROM_FILENAME"
 
-/** @brief Specifies whether the Android JNI asset extraction is supported.
- *
- * Turn on this option if you want to manage assets in native
- * Android application without having to keep the internal directory and asset
- * manager pointer.
- */
-#define AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT "AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT"
+ /** @brief Specifies whether the Android JNI asset extraction is supported.
+  *
+  * Turn on this option if you want to manage assets in native
+  * Android application without having to keep the internal directory and asset
+  * manager pointer.
+  */
+ #define AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT "AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT"
 
 // ---------------------------------------------------------------------------
 /** @brief Specifies whether the IFC loader skips over IfcSpace elements.
@@ -1019,7 +1028,7 @@ enum aiComponent {
 
 // default value for AI_CONFIG_IMPORT_IFC_SMOOTHING_ANGLE
 #if (!defined AI_IMPORT_IFC_DEFAULT_SMOOTHING_ANGLE)
-#define AI_IMPORT_IFC_DEFAULT_SMOOTHING_ANGLE 10.0f
+#   define AI_IMPORT_IFC_DEFAULT_SMOOTHING_ANGLE 10.0f
 #endif
 
 // ---------------------------------------------------------------------------
@@ -1035,7 +1044,7 @@ enum aiComponent {
 
 // default value for AI_CONFIG_IMPORT_IFC_CYLINDRICAL_TESSELLATION
 #if (!defined AI_IMPORT_IFC_DEFAULT_CYLINDRICAL_TESSELLATION)
-#define AI_IMPORT_IFC_DEFAULT_CYLINDRICAL_TESSELLATION 32
+#   define AI_IMPORT_IFC_DEFAULT_CYLINDRICAL_TESSELLATION 32
 #endif
 
 // ---------------------------------------------------------------------------
@@ -1087,7 +1096,7 @@ enum aiComponent {
 #define AI_CONFIG_EXPORT_POINT_CLOUDS "EXPORT_POINT_CLOUDS"
 
 /** @brief Specifies whether to use the deprecated KHR_materials_pbrSpecularGlossiness extension
- *
+ * 
  * When this flag is undefined any material with specularity will use the new KHR_materials_specular
  * extension. Enabling this flag will revert to the deprecated extension. Note that exporting
  * KHR_materials_pbrSpecularGlossiness with extensions other than KHR_materials_unlit is unsupported,
@@ -1108,9 +1117,9 @@ enum aiComponent {
  * Property type: Bool. Default value: false.
  */
 #define AI_CONFIG_EXPORT_GLTF_UNLIMITED_SKINNING_BONES_PER_VERTEX \
-    "USE_UNLIMITED_BONES_PER VERTEX"
+        "USE_UNLIMITED_BONES_PER VERTEX"
 
-/** @brief Specifies whether to write the value referenced to opacity in TransparencyFactor of each material.
+/** @brief Specifies whether to write the value referenced to opacity in TransparencyFactor of each material. 
  *
  * When this flag is not defined, the TransparencyFactor value of each meterial is 1.0.
  * By enabling this flag, the value is 1.0 - opacity;
@@ -1118,20 +1127,20 @@ enum aiComponent {
  * Property type: Bool. Default value: false.
  */
 #define AI_CONFIG_EXPORT_FBX_TRANSPARENCY_FACTOR_REFER_TO_OPACITY \
-    "EXPORT_FBX_TRANSPARENCY_FACTOR_REFER_TO_OPACITY"
+        "EXPORT_FBX_TRANSPARENCY_FACTOR_REFER_TO_OPACITY"
 
 /**
  * @brief Specifies the blob name, assimp uses for exporting.
- *
- * Some formats require auxiliary files to be written, that need to be linked back into
+ * 
+ * Some formats require auxiliary files to be written, that need to be linked back into 
  * the original file. For example, OBJ files export materials to a separate MTL file and
  * use the `mtllib` keyword to reference this file.
- *
+ * 
  * When exporting blobs using #ExportToBlob, assimp does not know the name of the blob
- * file and thus outputs `mtllib $blobfile.mtl`, which might not be desired, since the
- * MTL file might be called differently.
- *
- * This property can be used to give the exporter a hint on how to use the magic
+ * file and thus outputs `mtllib $blobfile.mtl`, which might not be desired, since the 
+ * MTL file might be called differently. 
+ * 
+ * This property can be used to give the exporter a hint on how to use the magic 
  * `$blobfile` keyword. If the exporter detects the keyword and is provided with a name
  * for the blob, it instead uses this name.
  */
@@ -1143,14 +1152,15 @@ enum aiComponent {
 #define AI_CONFIG_GLOBAL_SCALE_FACTOR_KEY "GLOBAL_SCALE_FACTOR"
 
 #if (!defined AI_CONFIG_GLOBAL_SCALE_FACTOR_DEFAULT)
-#define AI_CONFIG_GLOBAL_SCALE_FACTOR_DEFAULT 1.0f
+#   define AI_CONFIG_GLOBAL_SCALE_FACTOR_DEFAULT  1.0f
 #endif // !! AI_DEBONE_THRESHOLD
 
 #define AI_CONFIG_APP_SCALE_KEY "APP_SCALE_FACTOR"
 
 #if (!defined AI_CONFIG_APP_SCALE_KEY)
-#define AI_CONFIG_APP_SCALE_KEY 1.0
+#   define AI_CONFIG_APP_SCALE_KEY 1.0
 #endif // AI_CONFIG_APP_SCALE_KEY
+
 
 // ---------- All the Build/Compile-time defines ------------
 
