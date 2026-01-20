@@ -4,9 +4,9 @@
       "component": {
         "type": "git",
         "git": {
-		  "Version": "5.4.3",
+		  "Version": "6.0.3",
           "repositoryUrl": "https://github.com/assimp/assimp",
-          "commitHash": "c35200e38ea8f058812b83de2ef32c6093b0ece2"
+          "commitHash": "cf7b652190827878a4726709f0998ce170e55ce8"
         }
       }
     }

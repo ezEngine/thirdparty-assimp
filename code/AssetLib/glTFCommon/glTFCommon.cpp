@@ -2,7 +2,7 @@
 Open Asset Import Library (assimp)
 ----------------------------------------------------------------------
 
-Copyright (c) 2006-2024, assimp team
+Copyright (c) 2006-2025, assimp team
 
 All rights reserved.
 
@@ -38,15 +38,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ----------------------------------------------------------------------
 */
-#ifndef ASSIMP_BUILD_NO_GLTF_IMPORTER
-
-#include "AssetLib/glTF/glTFCommon.h"
-
-namespace glTFCommon {
+#include "AssetLib/glTFCommon/glTFCommon.h"
 
 using namespace glTFCommon::Util;
 
-namespace Util {
+namespace glTFCommon::Util {
 
 bool ParseDataURI(const char *const_uri, size_t uriLen, DataURI &out) {
     if (nullptr == const_uri) {
@@ -111,7 +107,4 @@ bool ParseDataURI(const char *const_uri, size_t uriLen, DataURI &out) {
     return true;
 }
 
-} // namespace Util
-} // namespace glTFCommon
-
-#endif
+} // namespace glTFCommon::Uti
