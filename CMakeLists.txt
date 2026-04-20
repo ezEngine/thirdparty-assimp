@@ -17,6 +17,10 @@ else()
   endforeach()
 endif()
 
+if(EZ_CMAKE_PLATFORM_POSIX)
+  add_compile_definitions(HAVE_UNISTD_H)
+endif()
+
 ez_create_target(SHARED_LIBRARY ${PROJECT_NAME} NO_EZ_PREFIX NO_UNITY NO_WARNINGS_AS_ERRORS ENABLE_RTTI NO_DEBUG MANUAL_SOURCE_FILES "${SRC_FILES}")
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC BUILDSYSTEM_ENABLE_AI_SUPPORT)
